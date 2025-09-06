@@ -8,7 +8,7 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 # 🚀 Technologies Used
 * Python: programming language.
 * IntelliJ-PyCharm: IDE used for development.
-* AWS: Cloud provider.
+* DigiTalOcean: Cloud provider.
 * Boto3 AWS SDK for Python.
 * Terraform
 
@@ -18,9 +18,8 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 🔄 Automatically restarts the application & server
 
 # Prerequisites
-* AWS account
+* DigitalOcean account
 * Python and PyCharm installed.
-* Terraform demo.
   
 # 🏗 Project Architecture
 
