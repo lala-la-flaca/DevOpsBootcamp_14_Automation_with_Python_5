@@ -44,7 +44,7 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    ```
 4. Install the DigitalOcean module.
    ```bash
-   pip install digitalocean pydo
+   pip install pydo
    ```
 5. Install the OS module, which allows saving the ENV variables in an .env file.
    ```bash
