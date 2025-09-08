@@ -9,8 +9,6 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 * Python: programming language.
 * IntelliJ-PyCharm: IDE used for development.
 * DigiTalOcean: Cloud provider.
-* Boto3 AWS SDK for Python.
-* Terraform
 
 # 🎯 Features
 ✅ Monitors website via HTTP response
@@ -25,24 +23,34 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 
 # ⚙️ Project Configuration
    
-## Creating Snapshots
-1. Deploy infrastructure with Terraform
-   
-2. Import boto3 module.
+## Deploying DigitalOcean Server
+1. Deploy a DigitalOcean Server
+2. Install Docker following the guidelines for your OS.
+3. Run the nginx Docker container.
    ```bash
-   import boto3
+   docker run nginx -d -p 8080:80
    ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_2/blob/main/Img/2.PNG" width=800 />
-   
-3. Import Schedule module
+4. Verify that nginx is accessible
+
+## Monitoring the Website
+1. Create a new Python file.
+2. Install the request module.
    ```bash
-   import schedule
+   pip install requests
    ```
-   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_4/blob/main/Img/3.PNG" width=800 />
-   
-4. Initialize client
+3. Install the schedule module.
    ```bash
-    ec2_client = boto3.client('ec2', region_name="us-east-1")
+   pip install schedule
    ```
-    <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_4/blob/main/Img/4.PNG" width=800 />
+4. Install the DigitalOcean module.
+   ```bash
+   pip install digitalocean pydo
+   ```
+5. Install the OS module, which allows saving the ENV variables in an .env file.
+   ```bash
+   pip install os dotenv
+   ```
+6. 
+## Notification Email
+## Restarting Server
    
