@@ -50,7 +50,9 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    ```bash
    pip install os dotenv
    ```
-6. 
+6. Get the Web status
+7.  Check whether the application is running or not. If the application is not running, then the script sends an email notification and restarts the container.
+   
 ## Notification Email
 ## Restarting Server
    
