@@ -25,12 +25,18 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    
 ## Deploying DigitalOcean Server
 1. Deploy a DigitalOcean Server
-2. Install Docker following the guidelines for your OS.
-3. Run the nginx Docker container.
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_5/blob/main/Img/1%20droplet%20created.png" width=800/>
+   
+3. Install Docker following the guidelines for your OS.
+   
+5. Run the nginx Docker container.
    ```bash
-   docker run nginx -d -p 8080:80
+    docker run nginx -d -p 8080:80
    ```
-4. Verify that nginx is accessible using the IP:Port
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_5/blob/main/Img/4%20docker%20run%20command%20to%20install%20image.png" width=800 />
+   
+7. Verify that nginx is accessible using the IP:Port
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_5/blob/main/Img/3%20nginx%20running.png" width=800/>
 
 ## Monitoring the Website
 1. Create a new Python file.
@@ -57,14 +63,15 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    * Enable 2-Step Verification.
    * Create App password
    * Use password as EMAIL_PASSWORD
-     
+    
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_5/blob/main/Img/6%20google%20account%20apppasswords.png" width=800/>
+   
 5. Get the Web status
    ```bash
        try:
         response = requests.get('http://138.197.126.110:8080/')
         print(response.status_code)
    ```
-   <img src="" />
    
 6. Monitoring code: The application monitors the website, restarts the container, and the droplet on host failure.
     ```bash
@@ -165,6 +172,8 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
     * If the site returns 200, the script returns running OK
     * If the site returns a non-200, it sends a notification email and restarts the container.
     * If the request fails (hots down), it sends an email, reboots the droplet, waits for completion, then restarts the container.
+
+   <img src="https://github.com/lala-la-flaca/DevOpsBootcamp_14_Automation_with_Python_5/blob/main/Img/email%20notification.PNG" width=800/>
 
 ## Notification email
 ```bash
