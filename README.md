@@ -11,8 +11,10 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 * DigiTalOcean: Cloud provider.
 
 # 🎯 Features
-✅ Monitors website via HTTP response
+✅ Monitors website via HTTP response.
+
 📧 Sends email notifications when downtime occurs
+
 🔄 Automatically restarts the application & server
 
 # Prerequisites
