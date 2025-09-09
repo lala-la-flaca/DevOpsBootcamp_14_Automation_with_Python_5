@@ -53,12 +53,12 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
     EMAIL_PASSWORD="your_gmail_app_password"
     DIGITALOCEAN_TOKEN="dop_v1_xxx"
    ```
-6. To access Gmail using the application, you must enable 2-step verification and an APP password for your application.
+4. To access Gmail using the application, you must enable 2-step verification and an APP password for your application.
    * Enable 2-Step Verification.
    * Create App password
    * Use password as EMAIL_PASSWORD
      
-8. Get the Web status
+5. Get the Web status
    ```bash
        try:
         response = requests.get('http://138.197.126.110:8080/')
@@ -66,7 +66,7 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    ```
    <img src="" />
    
-9. Monitoring code: The application monitors the website, restarts the container, and the droplet on host failure.
+6. Monitoring code: The application monitors the website, restarts the container, and the droplet on host failure.
     ```bash
           import time
           import requests
@@ -161,10 +161,10 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
           while True:
               schedule.run_pending()
     ```
-   10. Expected behavior:
-       * If the site returns 200, the script returns running OK
-       * If the site returns a non-200, it sends a notification email and restarts the container.
-       * If the request fails (hots down), it sends an email, reboots the droplet, waits for completion, then restarts the container.
+7. Expected behavior:
+    * If the site returns 200, the script returns running OK
+    * If the site returns a non-200, it sends a notification email and restarts the container.
+    * If the request fails (hots down), it sends an email, reboots the droplet, waits for completion, then restarts the container.
 
 ## Notification email
 ```bash
