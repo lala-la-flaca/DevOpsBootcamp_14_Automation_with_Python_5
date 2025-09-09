@@ -91,27 +91,7 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
           EMAIL_PWD = os.getenv("EMAIL_PASSWORD")
           DO_TOKEN = os.getenv("DIGITALOCEAN_TOKEN")
           
-          def send_email(email_msg):
-              with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
-                  # Encrypts communication to our email server
-                  smtp.starttls()
-                  smtp.ehlo()
-                  smtp.login(EMAIL_ADDRESS, EMAIL_PWD)
-                  smtp.sendmail(EMAIL_ADDRESS, EMAIL_ADDRESS, email_msg)
-          
-          
-          def restart_container():
-              print("Restarting Application Container...")
-              ssh = paramiko.SSHClient()
-              # AutoAddPolicy automatically allows the connection to the server
-              ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-              ssh.connect(hostname="138.197.126.110", username='root', key_filename='/home/lala/.ssh/id_rsa')
-              stdin, stdout, stderr = ssh.exec_command('docker start e76048d7c881')
-              print(stdout.readlines())
-              ssh.close()
-              print("Application restarted")
-          
-          
+    
           def monitoring_app():
               try:
                   response = requests.get('http://138.197.126.110:8080/')
@@ -177,6 +157,7 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
 
 ## Notification email
 ```bash
+def send_email(email_msg):
     with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
         # Encrypts communication to our email server
         smtp.starttls()
