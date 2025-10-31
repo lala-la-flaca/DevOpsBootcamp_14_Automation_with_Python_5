@@ -47,12 +47,12 @@ This exercise is part of Module 14: Automation with Python. Module 14 focuses on
    pip install requests schedule python-dotenv pydo paramiko
    ```
    <details><summary><strong>Note:</strong></summary>
-   * requests = HTTP checks
-   * schedule = simple interval scheduling
-   * python-dotenv = load .env secrets
-   * pydo = DigitalOcean API client
-   * paramiko = SSH to restart containers
-   * os, smtplib, and time are built-in
+   * requests = HTTP checks <br>
+   * schedule = simple interval scheduling<br>
+   * python-dotenv = load .env secrets<br>
+   * pydo = DigitalOcean API client<br>
+   * paramiko = SSH to restart containers<br>
+   * os, smtplib, and time are built-in<br>
  </details>
    
 3. Configure environment variables. Create a .env file
